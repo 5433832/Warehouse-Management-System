@@ -1,0 +1,29 @@
+* {
+    /*初始化清楚页面内外边距*/
+    padding: 0;
+    margin: 0;
+    /*盒子模型*/
+    box-sizing: border-box;
+}
+
+body {
+    /*弹性布局 让页面元素垂直+水平居中*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*让页面始终战术浏览器可视区域总高度*/
+    height: 100vh;
+    background: linear-gradient(#141e30, #243b55);
+
+}
+
+.login {
+    /*子元素成为弹性弹性项目*/
+    display: flex;
+    /*弹性项目垂直排列，原理：改变盒子的主轴方向 父元素为弹性盒子 改变后的主轴方向是向下*/
+    flex-direction: column;
+    /*让弹性项目在交叉轴方向水平剧中*/
+    /*现在主轴方向为下，交叉轴方向与主轴垂直，交叉轴为左右方向*/
+    align-items: center;
+
+}
