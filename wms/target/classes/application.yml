@@ -1,0 +1,28 @@
+#配置后台端口
+server:
+  port: 8090
+
+
+
+#  配置数据源
+spring:
+  datasource:
+    #链接本地mysql数据库的仓库管理系统库：
+    #useUnicode=true&characterEncoding=utf8设置utf-8编码处理数据
+    #useSSL=false：禁用 SSL 加密连接
+    #serverTimezone=GMT%2B8：指定应用程序所在的时区为 GMT+8 时区确保日期准确
+    #allowPublicKeyRetrieval=true：允许从 MySQL 8.0.11 版本开始支持的公钥检索功能
+    url: jdbc:mysql://localhost:3306/仓库管理系统?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    #指定Mysql驱动程序
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+
+
+
+    #加入mybaits日志使控制台可以看到sql语句和结果
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
